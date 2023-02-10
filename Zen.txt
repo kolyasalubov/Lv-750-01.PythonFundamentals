@@ -1,3 +1,4 @@
 Zen of Python!!!!!!
 
 10.Errors should never pass silently.
+13.There should be one-- and preferably only one --obvious way to do it.
