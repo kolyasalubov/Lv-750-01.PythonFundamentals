@@ -1,3 +1,12 @@
-str1 = "my isname isisis jameis isis bond"
-sub = "is"
-print(str1.count(sub, 4))
+x = 1
+y = 2
+
+print("Init x:", x)
+print("Init y:", y)
+
+x = x+y
+y = x-y
+x = x-y
+
+print("Swap x:", x)
+print("Swap y:", y)
