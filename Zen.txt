@@ -16,5 +16,6 @@ Zen of Python!!!!!!
 19.Namespaces are one honking great idea -- let's do more of those!
 26.Readability counts.
 28.Although practicality beats purity.
+40.Simple is better than complex.
 56.Namespaces are one honking great idea -- let's do more of those!
 
