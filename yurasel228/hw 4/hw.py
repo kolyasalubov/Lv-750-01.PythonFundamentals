@@ -1,6 +1,7 @@
-
 number = int(input("Enter a number: "))
-if number % 2 == 0:
-    print(f"{number} is even.")
-else:
-    print(f"{number} is odd.")
+
+factorial = 1
+for i in range(1, number+1):
+    factorial *= i
+
+print("Factorial of", number, "is", factorial)
