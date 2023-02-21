@@ -11,4 +11,4 @@ sorted_number = "".join(sorted(number))
 
 print('Уведене вами число - {} : , добуток його цифр - {}, обернене число'
       ' - {} , а також впорядковане - {}'.format(number, count, reverce_number, sorted_number))
-
+sorted_number.lower()
