@@ -19,4 +19,5 @@ Zen of Python!!!!!!
 23.Complex is better than complicated.
 26.Readability counts.
 28.Although practicality beats purity.
+29.Errors should never pass silently.
 56.Namespaces are one honking great idea -- let's do more of those!
