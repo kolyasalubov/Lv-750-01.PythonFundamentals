@@ -1,3 +1,4 @@
+#1
 # int_list = (list(range(11)))
 
 # float_list = []
@@ -7,5 +8,9 @@
 # print("Int list:", int_list)
 # print("Float list:", float_list)
 
-my_list = (list(range(33)))
-print(my_list[0])
+#2
+n = int(input("Введите число n: "))
+a, b = 0, 1
+while a <= n:
+    print(a)
+    a, b = b, a+b
