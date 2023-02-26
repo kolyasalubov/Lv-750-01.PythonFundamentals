@@ -18,5 +18,7 @@ Zen of Python!!!!!!
 19.Namespaces are one honking great idea -- let's do more of those!
 23.Complex is better than complicated.
 26.Readability counts.
+27.Special cases aren't special enough to break the rules.
 28.Although practicality beats purity.
+29.Errors should never pass silently.
 56.Namespaces are one honking great idea -- let's do more of those!
