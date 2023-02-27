@@ -1,7 +1,0 @@
-NAME = input("WHAT IS YOUR NAME? ")
-AGE = int(input("HOW OLD ARE YOU? "))
-CITY = input("WHERE DO YOU LIVE? ")
-print(f"\n")
-print(f"HELLO, {NAME}")
-print(f"YOUR AGE IS {AGE}")
-print(f"YOU LIVE IN {CITY}")
