@@ -7,9 +7,9 @@ else:
     for item in range (2,fibonacci_number):
         fibonacci_list.append(fibonacci_list[item -1] + fibonacci_list[item-2])
 
-# Цикл для виведення елементів по 5 у рядок
+# Loop 'for' for output 5-th number in a row
 for i in range(0, fibonacci_number+2, 5):
-    row = fibonacci_list[i:i+5]  # отримуємо п'ять елементів для поточного рядка
-    print("{:<5} {:<5} {:<5} {:<5} {:<5}".format(*row))  # форматуємо та виводимо рядок
+    row = fibonacci_list[i:i+5]  # Take 5 number in a list
+    print("{:<5} {:<5} {:<5} {:<5} {:<5}".format(*row))  # Take Format and output
 
 
