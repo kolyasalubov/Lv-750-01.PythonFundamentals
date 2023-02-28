@@ -3,7 +3,7 @@ fibonacci_number = int(input('Please, input Fibonacci number?'))
 if fibonacci_number <= 2:
     print(fibonacci_list)
 else:
-    # while fibonacci_list.count() <= fibonacci_number:
+
     for item in range (2,fibonacci_number):
         fibonacci_list.append(fibonacci_list[item -1] + fibonacci_list[item-2])
 
