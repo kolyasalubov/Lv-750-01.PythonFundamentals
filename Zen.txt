@@ -20,4 +20,6 @@ Zen of Python!!!!!!
 26.Readability counts.
 28.Although practicality beats purity.
 29.Errors should never pass silently.
-56.Namespaces are one honking great idea -- let's do more of those!
+55.If the implementation is easy to explain, it may be a good idea.
+56.Namespaces are one honking great idea -- let's do more 
+of those!
