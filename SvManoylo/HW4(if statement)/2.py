@@ -16,12 +16,9 @@
 # else:
 #     print ('Your number is odd')
 
-# #3 task
-# x= int(input('Your number '))
-# fact=1 
-# for i in range(1,x+1): 
-#     fact=fact*i 
-#     print("The factorial of ", x," is: ",fact)
-
-if 2 == 2:
-    print("ice cream is tasty!")
+#3 task
+x= int(input('Your number '))
+fact=1 
+for i in range(1,x+1): 
+    fact=fact*i 
+    print("The factorial of ", x," is: ",fact)

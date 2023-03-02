@@ -1,11 +1,8 @@
-print('What is your name?')
-name = input()
+name = input('What is your name? ')
 print('Hello, ' + name + '!', type(name))
 
-print('How old are you?')
-age = input()
+age = input('How old are you? ')
 print('Your age is ' + age, type(age))
 
-print('Where do you live?')
-city = input()
+city = input('Where do you live? ')
 print('You live in ' + city, type(city))
