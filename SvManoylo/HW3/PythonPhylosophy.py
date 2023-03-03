@@ -56,44 +56,44 @@
 # # 56.Namespaces are one honking great idea -- let's do more of those!
 # # '''
 
-# # b = multiline_str.find('better')
-# # print ("better - ", (b))
+b = multiline_str.count('better')
+print ("better - ", (b))
 
-# # n = multiline_str.find('never')
-# # print ("never - ", (n))
+n = multiline_str.count('never')
+print ("never - ", (n))
 
-# # i = multiline_str.find('is')
-# # print ("is - ", (i))
+i = multiline_str.count('is')
+print ("is - ", (i))
 
-# # upper_multiline_string = multiline_str.upper()
-# # print (upper_multiline_string)
+upper_multiline_string = multiline_str.upper()
+print (upper_multiline_string)
 
-# # multiline_str_without_i = multiline_str.replace('i','&')
-# # print (multiline_str_without_i)
+multiline_str_without_i = multiline_str.replace('i','&')
+print (multiline_str_without_i)
 
-# # # pert 2
+# pert 2
 
-# # a = int(input('Add some natural number(4 int):'))
-# # a1 = str(a)
-# # print (int(a1[0]) * int(a1[1]) * int(a1[2]) * int(a1[3]))
+a = int(input('Add some natural number(4 int):'))
+a1 = str(a)
+print (int(a1[0]) * int(a1[1]) * int(a1[2]) * int(a1[3]))
 
-# # r = int(a1[::-1])
-# # print(r)
+r = int(a1[::-1])
+print(r)
 
-# # print (sorted(a1))
+print (sorted(a1))
 
-# # # part 3
-# # x = 5
-# # y = 10
+# part 3
+x = 5
+y = 10
 
-# # x, y = y, x
-# # print("x =", x)
-# # print("y =", y)
+x, y = y, x
+print("x =", x)
+print("y =", y)
 
-# def vol_shell(r1, r2):
-#     PI = 3.14
-#     volume = (4 * PI * (r1 - r2)**2) / 3
-#     return volume
+def vol_shell(r1, r2):
+    PI = 3.14
+    volume = (4 * PI * (r1 - r2)**2) / 3
+    return volume
  
 str1 = "my isname isisis jameis isis bond"
 sub = "is"
