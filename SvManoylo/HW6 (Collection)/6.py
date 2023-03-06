@@ -33,7 +33,7 @@
 def add_indexes(lst):
     new_lst = []
     for i in range(len(lst)):
-       i = list(i) + lst[i]
+       i = i + lst[i]
        new_lst.append(i)
        return new_lst
 
