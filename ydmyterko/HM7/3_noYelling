@@ -1,0 +1,8 @@
+def filter_words(st):
+    """Filter words function"""
+    return " ".join(st.capitalize().split())
+
+print(filter_words.__doc__)
+print(filter_words('HELLO CAN YOU HEAR ME')) #=> Hello can you hear me
+print(filter_words('now THIS is REALLY interesting')) #=> Now this is really interesting
+print(filter_words('THAT was EXTRAORDINARY!')) #=> That was extraordinary!

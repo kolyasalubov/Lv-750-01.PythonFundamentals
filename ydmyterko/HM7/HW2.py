@@ -11,14 +11,14 @@ def Triangle_area():
     a = int(input("Enter side a: "))
     b = int(input("Enter side b: "))
     area = 1/2*a*b
-    print("Triangle area is: ",area)
+    print("Triangle area is:",area)
     return area
 
 def Circle_area(r):
     """Calculate Circul area"""
     r = int(input("Enter radius r: "))
     area = 3.14*r**2
-    print("Circle area is: ", area)
+    print("Circle area is:",area)
     return area
 
 object = int(input("""Please enter number object 
