@@ -1,0 +1,11 @@
+a = float(input("Write first number:"))
+b = float(input("Write second number:"))
+print(f"A+B={a+b}")
+print(f"A-B={a-b}")
+print(f"A*B={a*b}")
+print(f"A/B={a/b}")
+print(f"A**B={a**b}")
+print(f"A//B={a//b}")
+print(f"A%B={a%b}")
+
+input()
