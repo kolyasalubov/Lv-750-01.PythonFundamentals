@@ -20,22 +20,28 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!""" 
 
-key_words = ["better", "never", "is"]
-word_counts = {}
+# key_words = ["better", "never", "is"]
+# word_counts = {}
 
-for word in key_words:
-    count = pythPhilosophy.count(word)
-    word_counts[word] = count     
+# for word in key_words:
+#     count = pythPhilosophy.count(word)
+#     word_counts[word] = count     
 
-print(word_counts)
+# print(word_counts)
 
-#second task
+# #second task
+
+# print(pythPhilosophy.upper())
+
+# #third task
+
+# print(pythPhilosophy.replace("i", "&"))
+   
+
+print("In 'Zen of Python' the word \"better\" repeat", pythPhilosophy.count("better"), 'times')
+print("In 'Zen of Python' the word \"never\" repeat", pythPhilosophy.count("never"), 'times')
+print("In 'Zen of Python' the word \"is\" repeat", pythPhilosophy.count("is"), 'times')
 
 print(pythPhilosophy.upper())
 
-#third task
-
-print(pythPhilosophy.replace("i", "&"))
-   
-
-             
+print(pythPhilosophy.replace("i","&"))         
