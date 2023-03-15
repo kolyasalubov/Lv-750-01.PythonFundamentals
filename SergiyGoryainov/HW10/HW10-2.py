@@ -24,6 +24,7 @@ class Human:
     def msg():
         print(f'Here is the msg form static method')
 
+
 sarah = Human('Sarah')
 
 print(sarah)
