@@ -16,9 +16,12 @@ Zen of Python!!!!!!
 17.If the implementation is hard to explain, it's a bad idea.
 18.If the implementation is easy to explain, it may be a good idea.
 19.Namespaces are one honking great idea -- let's do more of those!
+21.Explicit is better than implicit
 23.Complex is better than complicated.
 26.Readability counts.
 27.Special cases aren't special enough to break the rules.
 28.Although practicality beats purity.
 29.Errors should never pass silently.
-56.Namespaces are one honking great idea -- let's do more of those!
+55.If the implementation is easy to explain, it may be a good idea.
+56.Namespaces are one honking great idea -- let's do more 
+of those!
