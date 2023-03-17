@@ -21,4 +21,3 @@ match choice:
     print(f"The area of a circle: {circle(3.5)}")
   case _:
     print("Try 1,2 or 3")
-    
