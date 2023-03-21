@@ -1,45 +1,59 @@
 import pygame
 
-WIDTH_DISPLAY = 500
-HEIGHT_DISPLAY = 500
-PI = 3.14
+# визначаємо константу затримки кадрів
+# та інші константи
+FPS = 60
 
-WHITE_COLOR = (255, 255, 255)
+WIDTH_DISPLAY=500
+HEIGHT_DISPLAY=500
+
+WHITE_COLOR = (255, 255, 255)  
+ORANGE_COLOR = (255, 150, 100)
 BLACK_COLOR = (0, 0, 0)
-GRAY_COLOR = (125, 125, 125)
-LIGHT_BLUE_COLOR = (64, 128, 255)
-GREEN_COLOR = (0, 200, 64)
-YELLOW_COLOR = (225, 225, 0)
-PINK_COLOR = (230, 50, 230)
 
-
+COORD_X = 50
+COORD_Y = 50
+WIDTH_RECTANGLE = 40
+HEIGHT_RECTANGLE = 60
+DELTA_STEP = 5
+ 
+# ініціалізація та створення об'єктів
 pygame.init()
+# pygame.display.set_mode((600, 400))
 
-screen = pygame.display.set_mode((WIDTH_DISPLAY, HEIGHT_DISPLAY), pygame.RESIZABLE)
+gameDisplay = pygame.display.set_mode((WIDTH_DISPLAY, HEIGHT_DISPLAY), pygame.RESIZABLE)
+
+pygame.display.set_caption("My first game")
 
 
-pygame.display.set_caption("Draw primitives")
-
+run = True
 clock = pygame.time.Clock()
 
-done = True
-
-while done:
+while run:
+    pygame.time.delay(100)
+    
     for event in pygame.event.get(): 
         if event.type == pygame.QUIT:
-            done = False
-            
-            
-            
+            run = False
+
+    keys = pygame.key.get_pressed()
     
+    if keys[pygame.K_LEFT] and COORD_X > 10:
+        COORD_X = COORD_X - DELTA_STEP
+    if keys[pygame.K_RIGHT] and COORD_X < 450:
+        COORD_X = COORD_X + DELTA_STEP
+    if keys[pygame.K_UP] and COORD_Y > 10:
+        COORD_Y = COORD_Y - DELTA_STEP
+    if keys[pygame.K_DOWN] and COORD_Y < 430:
+        COORD_Y = COORD_Y + DELTA_STEP
+
+
+      
+    pygame.draw.rect(gameDisplay, (255,0,0), [COORD_X, 
+                                              COORD_Y, 
+                                              WIDTH_RECTANGLE, 
+                                              HEIGHT_RECTANGLE])
     
-    # # pygame.draw.line(screen, (255,255,255), [10, 30], [290, 15], 3)
-    # # pygame.draw.line(screen, WHITE_COLOR, [10, 30], [290, 15], 3)
-    # pygame.draw.line(screen, WHITE_COLOR, [10, 80], [320, 55])
+    pygame.display.update()
     
-    # # #aaline згладжена лінія, товщина в цьому
-    # # # випадку не задається
-    # pygame.draw.aaline(screen, WHITE_COLOR, [10, 70], [290, 55])
-    # # screen.fill(GREEN_COLOR)
-    
-    # pygame.display.update()
+    clock.tick(FPS)
