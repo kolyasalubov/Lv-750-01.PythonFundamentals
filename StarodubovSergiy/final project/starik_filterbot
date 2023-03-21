@@ -1,0 +1,61 @@
+import logging
+from telegram import Update, MessageEntity
+from telegram.ext import Application, CommandHandler, MessageHandler, CallbackContext, filters
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger()
+
+unwanted_channels = ["Smak", "somespamchannel"]
+
+def start(update: Update, context: CallbackContext):
+    update.message.reply_text('Привіт! Я бот-фільтр для каналів Telegram.')
+
+async def filter_spam(update: Update, context: CallbackContext):
+    message = update.message
+    text = message.text.lower()
+
+    if message.entities:
+        for entity in message.entities:
+            if entity.type == MessageEntity.URL or entity.type == MessageEntity.TEXT_LINK:
+                for chanel in unwanted_channels:
+                    if chanel.lower() in text:
+                        await message.delete()
+                        return None
+    return None
+
+def add_channel(update: Update, context: CallbackContext):
+    global unwanted_channels
+
+    channel = context.args[0]
+    if channel.lower() not in map(str.lower, unwanted_channels):
+        unwanted_channels.append(channel)
+        update.message.reply_text(f"Канал {channel} успішно доданий до списку небажаних каналів!")
+    else:
+        update.message.reply_text(f"Канал {channel} вже є в списку небажаних каналів.")
+
+def remove_channel(update: Update, context: CallbackContext):
+    global unwanted_channels
+
+    channel = context.args[0]
+    if channel.lower() in map(str.lower, unwanted_channels):
+        unwanted_channels.remove(channel)
+        update.message.reply_text(f"Канал {channel} успішно видалений зі списку небажаних каналів!")
+    else:
+        update.message.reply_text(f"Канал {channel} не знайдений у списку небажаних каналів.")
+
+def list_channels(update: Update, context: CallbackContext):
+    global unwanted_channels
+
+    channels = "\n".join(unwanted_channels)
+    update.message.reply_text(f"Список небажаних каналів:\n{channels}")
+
+
+def main():
+    application = Application.builder().token("6248091575:AAEgAMK4laj2aqjCG3jGbOuWlFIQOr4n2JY").build()
+
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(MessageHandler(filters.ALL, filter_spam))
+
+    application.run_polling()
+if __name__ == "__main__":
+    main()
