@@ -1,5 +1,9 @@
 class Human():
-    
+    """
+    Init human's name.
+    Greet human.
+    Have 1 human's species.
+    """
     def __init__(self, name = "Peter"):
         self.name = name
     
