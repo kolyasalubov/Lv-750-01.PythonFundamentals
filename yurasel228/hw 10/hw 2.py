@@ -41,6 +41,4 @@ class Human:
         """
         return f"Ім'я людини: {self.name}, Вид: {self.species}"
 
-
-# Приклад використання:
 person1 = Human("Alice")
