@@ -12,6 +12,7 @@
 
 import pygame
 import random
+import string
 
 pygame.init()
 
@@ -38,7 +39,13 @@ while not game_over:
             game_over = True
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RETURN:
-                guess = int(guess_text)
+                try:
+                    guess = int(guess_text)
+                except ValueError:
+                    message = font.render("Invalid input. Enter a number between 1 and 100.", True, black)
+                    guess_text = ""
+                    continue
+
                 tries_remaining -= 1
 
                 if guess == number:
@@ -48,11 +55,17 @@ while not game_over:
                     message = font.render("Sorry, you ran out of tries. The secret number was " + str(number), True, black)
                     game_over = True
                 elif guess < number:
-                    message = font.render("Try higher one. You have " + str(tries_remaining) + " tries remaining", True, black)
+                    message = font.render("Try a higher number. You have " + str(tries_remaining) + " tries remaining", True, black)
                 else:
-                    message = font.render("Too lower one. You have " + str(tries_remaining) + " tries remaining", True, black)
+                    message = font.render("Try a lower number. You have " + str(tries_remaining) + " tries remaining", True, black)
 
                 guess_text = ""
+            elif event.key == pygame.K_BACKSPACE:
+                guess_text = guess_text[:-1]
+            else:
+                char = event.unicode
+                if char in string.digits:
+                    guess_text += char
 
     screen.fill(white)
     guess_label = font.render("Guess a number between 1 and 100:", True, black)
@@ -62,13 +75,11 @@ while not game_over:
     tries_label = font.render("You have " + str(tries_remaining) + " tries remaining", True, black)
     screen.blit(tries_label, (10, 90))
 
-
     if message:
         message_rect = message.get_rect(center=(screen_width/2, screen_height/2))
         screen.blit(message, message_rect)
 
-
     pygame.display.update()
 
-
+pygame.time.delay(5000)
 pygame.quit()
