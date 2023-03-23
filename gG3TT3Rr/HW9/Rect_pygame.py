@@ -1,25 +1,25 @@
 import pygame
 
-FPS = 60
+FPS = 120
 
 WIDTH_DISPLAY=500
 HEIGHT_DISPLAY=500
 
 COORD_X=50
 COORD_Y=50
-WIDTH_RECTANGLE=50
+WIDTH_RECTANGLE=40
 HEIGHT_RECTANGLE=60
 DELTA_STEP=5
 
 BLACK_COLOR = (0, 0, 0)
-VIOLET_COLOR = (102, 0, 204)
+RED_COLOR = (250, 0, 0)
 
 pygame.init()
 
 
 gameDisplay = pygame.display.set_mode((WIDTH_DISPLAY, HEIGHT_DISPLAY), pygame.RESIZABLE)
 
-pygame.display.set_caption("My first game")
+pygame.display.set_caption("First game")
 
 
 run = True
@@ -34,29 +34,23 @@ while run:
 
     keys = pygame.key.get_pressed()
     
-    if keys[pygame.K_LEFT] and COORD_X > 5:
+    if keys[pygame.K_LEFT]:
         COORD_X = COORD_X-DELTA_STEP
-    if keys[pygame.K_RIGHT] and COORD_X < 440:
+    if keys[pygame.K_RIGHT]:
         COORD_X = COORD_X+DELTA_STEP
-    if keys[pygame.K_UP] and COORD_Y > 5:
+    if keys[pygame.K_UP]:
         COORD_Y = COORD_Y-DELTA_STEP
-    if keys[pygame.K_DOWN] and COORD_Y < 440:
+    if keys[pygame.K_DOWN]:
         COORD_Y = COORD_Y+DELTA_STEP
-
 
 
     gameDisplay.fill(BLACK_COLOR) 
 
-    pygame.draw.rect(gameDisplay, VIOLET_COLOR, [COORD_X, 
-                                                 COORD_Y, 
-                                                 WIDTH_RECTANGLE, 
-                                                 HEIGHT_RECTANGLE])
+    pygame.draw.rect(gameDisplay, RED_COLOR, [COORD_X, 
+                                              COORD_Y, 
+                                              WIDTH_RECTANGLE, 
+                                              HEIGHT_RECTANGLE])
     pygame.display.update()
     clock.tick(FPS)
-    for event in pygame.event.get(): 
-        if event.type == pygame.QUIT:
-            done = False
-            
-            
-            
     
+
