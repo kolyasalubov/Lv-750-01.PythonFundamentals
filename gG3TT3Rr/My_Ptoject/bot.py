@@ -20,7 +20,7 @@ async def cmd_ban(message: types.Message):
     await message.bot.kick_chat_member(chat_id=config.GROUP_ID, user_id=message.reply_to_message.from_user.id)
 
     await message.reply_to_message.reply("Дурак в бане")
-    
+##
 
 @dp.message_handler(content_types=["new_chat_members"])
 async def on_user_joined(message: types.Message):
