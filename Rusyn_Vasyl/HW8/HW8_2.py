@@ -6,7 +6,7 @@ def check_password(password):
         print('Needed more symbols than 5!')
     elif len_password > 16:
         print('Too much... need under 16!')
-    elif len(re.findall('[a-m]', password)) !=0:
+    elif len(re.findall('[a-z]', password)) !=0:
         if len(re.findall('[A-Z]', password)) != 0:
             if len(re.findall('[0-9]', password)) != 0:
                 if len(re.findall('[£$@]', password)) != 0:
